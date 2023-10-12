@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import logo from './logo.png'
+import logoWhite from './LogoPetit.png'
 
 function Layout({ children }) {
   return (
@@ -23,7 +24,7 @@ function Layout({ children }) {
       <main>{children}</main>
       <footer>
         <div className="footer-logo">
-        <img src={logo} alt='logo'></img>
+        <img src={logoWhite} alt='logo'></img>
         </div>
         <p>2020 Kasa, all right reserved</p>
       </footer>
