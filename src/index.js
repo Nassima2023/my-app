@@ -7,10 +7,13 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './about'; 
 import NotFound from './NotFound'; 
+import Layout from './layout';
+
 
 const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Layout/>
     <Router>
       <Routes>
         {/* Route pour la page d'accueil (App) */}
