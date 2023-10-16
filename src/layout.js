@@ -2,6 +2,8 @@ import React from 'react';
 import './App.scss';
 import logo from './logo.png'
 import logoWhite from './LogoPetit.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './fontAwesome';
 
 function Layout({ children }) {
   return (
@@ -23,10 +25,16 @@ function Layout({ children }) {
       </header>
       <main>{children}</main>
       <footer>
+        
         <div className="footer-logo">
         <img src={logoWhite} alt='logo'></img>
         </div>
-        <p>2020 Kasa, all right reserved</p>
+
+        <div className="copyright-container">
+            <FontAwesomeIcon icon={['far', 'copyright']} className="copyright" />
+            <p>2020 Kasa, all right reserved</p>
+        </div>
+
       </footer>
     </div>
   );
