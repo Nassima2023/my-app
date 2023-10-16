@@ -2,10 +2,13 @@
 import React from 'react'
 // import ReactDOM from 'react-dom'
 import './App.scss';
+import Layout from './layout';
 
 
 function App() {
   return (
+  <Layout> 
+
     <div className="App">
         {/* <p> hello world </p> */}
       {/* <header className="App-header">
@@ -23,6 +26,8 @@ function App() {
         </a>
       </header> */}
     </div>
+    
+    </Layout>
   );
 }
 
