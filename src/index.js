@@ -7,6 +7,9 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './about'; 
 import NotFound from './NotFound'; 
+import './data.json'
+import AppartementDescription from './AppartmentDesciption';
+
 // import Layout from './layout';
 
 
@@ -20,8 +23,11 @@ root.render(
         <Route path="/" element={<App />} />
         {/* Route pour la page "About" */}
         <Route path="/about" element={<About />} />
+        <Route path="/description/:id" element={<AppartementDescription />} />
         {/* Route par défaut pour la page "NotFound" */}
         <Route path="*" element={<NotFound />} />
+        
+
       </Routes>
     </Router>
   </React.StrictMode>
