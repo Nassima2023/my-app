@@ -5,6 +5,8 @@ import Layout from './layout';
 import Slideshow from './slideshow';
 import './Slideshow.scss';
 import './AppartmentDescription.scss';
+import Collapse from './collapse';
+import './collapse2.scss'
 
 // Importez les images des étoiles
 import starActiveImage from './star-active 3.png';
@@ -28,7 +30,7 @@ function generateStars(rating) {
 }
 
 function AppartementDescription() {
-  const { id } = useParams(); // Utiliser le hook useParams pour obtenir les paramètres d'URL
+  const { id } = useParams(); // Utilisaion de useParams pour obtenir les paramètres d'URL
   const selectedApartment = data.find((apartment) => apartment.id === id);
 
   return (
@@ -49,15 +51,41 @@ function AppartementDescription() {
         </div>
 
         <div className="host-container">
+
           <div className="host-picture">
             <img src={selectedApartment.host.picture} alt="Host" />
           </div>
+
           <p className="host-name">{selectedApartment.host.name}</p>
+
         </div>
+
       </div>
+
           <div className="stars-container stars-right">
             {generateStars(parseInt(selectedApartment.rating))}
+            {/* Génère les étoiles en fonction du rating de l'appartement du fichier data.json */}
           </div>
+
+          <div className="appartment-description-collapse">
+
+            {/* Premier Collapse pour la description  */}
+            <Collapse title="Description" content={selectedApartment.description} className="custom-collapse" />
+            
+            {/* Deuxième Collapse pour les équipements */}
+            <Collapse
+              title="Équipements"
+              content={
+                <ul>
+                  {selectedApartment.equipments.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                  ))}
+                </ul>
+              }
+              className="custom-collapse"
+            />
+        </div>
+          
     </Layout>
   );
 }

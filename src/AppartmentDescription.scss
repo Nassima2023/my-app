@@ -95,4 +95,12 @@ main{
   }
   
   
-  
+  .collapse-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+
+

@@ -27,6 +27,7 @@ root.render(
         {/* Route par défaut pour la page "NotFound" */}
         <Route path="*" element={<NotFound />} />
         
+        
 
       </Routes>
     </Router>
