@@ -1,9 +1,10 @@
-import React, { useState } from 'react'; 
-import './Slideshow.scss'; 
-import ArrowLeft from './arrow_back_ios-24px 1.png'; 
+import React, { useState } from 'react';
+import './Slideshow.scss';
+import ArrowLeft from './arrow_back_ios-24px 1.png';
 import ArrowRight from './arrow_forward_ios-24px 1.png';
+
 const Slideshow = ({ images }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); // J'initialise l'index de l'image actuelle
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Fonction pour gérer le clic sur le bouton "Image précédente"
   const handlePreviousClick = () => {
@@ -16,35 +17,40 @@ const Slideshow = ({ images }) => {
   const handleNextClick = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      // Si l'index précédent est égal à 0 (première image), 
+      // passer à l'image la plus à droite (images.length - 1),
+      // sinon, passer à l'image précédente (index précédent - 1)
+
     );
   };
 
   return (
-    <div className="slideshow">
-      <button
-        className="previous"
-        onClick={handlePreviousClick}
-        style={{
-          display: images.length > 1 ? 'block' : 'none', // J'ajuste l'affichage du bouton en fonction du nombre d'images
-        }}
-      >
-        <img src={ArrowLeft} alt="previous" /> {/* J'affiche l'icône de la flèche gauche */}
-      </button>
+      <div className="slideshow"> {/* Div du diaporama */}
+        <button
+          className="previous"
+          onClick={handlePreviousClick}
+          style={{
+            display: images.length > 1 ? 'block' : 'none',
+          }}
+        >
+          <img src={ArrowLeft} alt="previous" className="previous-cover"/> {/* Bouton "Image précédente" */}
+        </button>
 
-      <img src={images[currentImageIndex]} alt="" /> {/* J'affiche l'image actuelle de la liste d'images */}
+        <img src={images[currentImageIndex]} alt="" /> {/* Image actuelle du diaporama */}
 
-      <button
-        className="next"
-        onClick={handleNextClick}
-        style={{
-          display: images.length > 1 ? 'block' : 'none', // J'ajuste l'affichage du bouton en fonction du nombre d'images
-        }}
-      >
-        <img src={ArrowRight} alt="next" /> {/* J'affiche l'icône de la flèche droite */}
-      </button>
+        <button
+          className="next "
+          onClick={handleNextClick}
+          style={{
+            display: images.length > 1 ? 'block' : 'none',
+          }}
+        >
+          <img src={ArrowRight} alt="next" className='next-cover' /> {/* Bouton "Image suivante" */}
+        </button>
+      
 
       <p className="picture-counter">
-        {currentImageIndex + 1} / {images.length} {/* J'affiche le numéro de l'image actuelle par rapport au nombre total d'images */}
+        {currentImageIndex + 1} / {images.length} {/* Numéro de l'image actuelle par rapport au nombre total d'images */}
       </p>
     </div>
   );

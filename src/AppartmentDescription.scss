@@ -1,0 +1,98 @@
+main{ 
+  padding: 20px
+}
+.appartement-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 25px;
+    width: 95%;
+    box-sizing: border-box;
+  
+    .info-container {
+      flex: 1;
+  
+      h1.title {
+        color: #FF6060;
+        font-weight: 400;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        width: 80%;
+      }
+  
+      h2.subtitle {
+        color: #FF6060;
+        font-weight: 400;
+        margin-top: 0;
+        font-size: 18px;
+      }
+    }
+  
+    .host-container {
+      display: flex;
+      align-items: center;
+      flex-direction:row-reverse;
+      margin-left: 20px;
+      box-sizing: border-box;
+      margin-right: -20px;
+  
+      .host-name {
+        color: #FF6060;
+        font-size: 18px;
+        width: 60px;
+      }
+  
+      .host-picture img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  .tags-container {
+    display: flex;
+    align-items: center;
+  
+    .tag {
+      background-color: #FF6060;
+      border-radius: 10px;
+      height: 25px;
+      width: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      color: white;
+      font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  
+      .tag-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  
+  .stars-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    box-sizing: border-box;
+    margin-top: -32px;
+    height: 30px;
+    
+  }
+
+  .star-icon {
+    width: 22px; 
+    height: 22px; 
+    margin-top: 4px;
+    margin-right: 5px;
+  }
+  
+  
+  
