@@ -3,7 +3,7 @@ import './Card.scss';
 
 function AppartementCard(props) {
   const { id, title, cover} = props.appartement;
-  // Je déstructure les propriétés "id," "title," du composant "AppartementCard" à partir des "props" passées.
+  // Je déstructure les propriétés "id," "title," du composant "AppartementCard" à partir des "props".
 
     return (
       

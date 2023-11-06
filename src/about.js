@@ -3,6 +3,7 @@ import Layout from './layout';
 import imgSource2 from './imgSource2.png';
 import Banner from './banner';
 import Collapse from './collapse'; 
+
 function About() {
   return (
     <Layout>

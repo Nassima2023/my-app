@@ -1,12 +1,12 @@
 import React from 'react';
-import Layout from './layout'; // on importe le layout 
+import Layout from './layout'; //  j'importe le layout 
 import imgSource from './img.source.png';
-import Banner from './banner'; // on importe le composant Banner
-import AppartementCard from './card'; // on importe le composant Card
-import data from './data.json'; // on importe les données depuis le fichier JSON
+import Banner from './banner'; // j'importe le composant Banner
+import AppartementCard from './card'; // j'importe le composant Card
+import data from './data.json'; // j'importe les données depuis le fichier JSON
 
 function App() {
-  const sixFirstAppartements = data.slice(0, 6);
+  const Appartements = data.slice(0, 20);
 
   return (
     <Layout>
@@ -16,7 +16,7 @@ function App() {
         
         
         <div className="card-container">
-          {sixFirstAppartements.map((appartement, index) => (
+          {Appartements.map((appartement, index) => (
             <AppartementCard key={index} appartement={appartement} />
           ))}
           {

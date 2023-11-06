@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './collapse.scss';
 import arrow from './arrow_back_ios-24px 2.png'
+import './collapse2.scss'
 
 // Définition du composant Collapse
 function Collapse({ title, content }) {
@@ -19,7 +20,7 @@ function Collapse({ title, content }) {
       <div
 
         // Élément du Collapse qui réagit au clic
-        className={`collapse ${isCollapsed ? '' : 'open'}`}
+        className={`collapse  ${isCollapsed ? '' : 'open'}`}
         onClick={returnCollapse} 
         >
         {title} {/* Affiche le titre du Collapse */}
@@ -41,4 +42,4 @@ function Collapse({ title, content }) {
   );
 }
 
-export default Collapse; // Export du composant Collapse
+export default Collapse; 

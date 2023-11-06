@@ -1,5 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useParams, useNavigate} from 'react-router-dom';
 import data from './data.json';
 import Layout from './layout';
 import Slideshow from './slideshow';
@@ -7,8 +8,9 @@ import './Slideshow.scss';
 import './AppartmentDescription.scss';
 import Collapse from './collapse';
 import './collapse2.scss'
+import './NotFound'
 
-// Importez les images des étoiles
+// Importation des images des étoiles
 import starActiveImage from './star-active 3.png';
 import vectorImage from './Vector.png';
 
@@ -30,8 +32,27 @@ function generateStars(rating) {
 }
 
 function AppartementDescription() {
-  const { id } = useParams(); // Utilisaion de useParams pour obtenir les paramètres d'URL
+  //  On récupère l'ID de l'appartement à partir des paramètres d'URL
+  const { id } = useParams();
+
+  // Rechercher l'appartement correspondant dans les données
   const selectedApartment = data.find((apartment) => apartment.id === id);
+
+  // On obtient la fonction de navigation pour effectuer une redirection
+  const navigate = useNavigate();
+
+  // on utilise useEffect pour déclencher la redirection lorsque c'est nécessaire
+  useEffect(() => {
+    // Si l'appartement n'est pas trouvé, nous sommes redirigés vers la page "NotFound"
+    if (!selectedApartment) {
+      navigate('/NotFound');
+    }
+  }, [navigate, selectedApartment]);
+
+  // Si l'appartement n'est pas trouvé, retourner null
+  if (!selectedApartment) {
+    return null;
+  }
 
   return (
     <Layout>
@@ -62,7 +83,7 @@ function AppartementDescription() {
 
       </div>
 
-          <div className="stars-container stars-right">
+          <div className="stars-container ">
             {generateStars(parseInt(selectedApartment.rating))}
             {/* Génère les étoiles en fonction du rating de l'appartement du fichier data.json */}
           </div>
