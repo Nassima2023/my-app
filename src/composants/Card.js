@@ -2,21 +2,15 @@ import React from 'react';
 import '../styles/Card.scss';
 
 function AppartementCard(props) {
-  const { id, title, cover} = props.appartement;
-  // Je déstructure les propriétés "id," "title," du composant "AppartementCard" à partir des "props".
+  const { id, title, cover } = props.appartement;
 
-    return (
-      
-        <div className="card" style={{backgroundImage: 'url(' + cover + ')'}}>
-          
-          <a href={`/description/${id}`} className="card-title">
-            {title}
-            {/* J'affiche le nom de l'appartement (stocké dans "title") en tant que lien cliquable */}
-          </a>
-
-        </div>
-      
-    );
-  }
+  return (
+    <a href={`/description/${id}`} className="card" style={{ backgroundImage: 'url(' + cover + ')' }}>
+      <div className="card-title">
+        {title}
+      </div>
+    </a>
+  );
+}
 
 export default AppartementCard;
