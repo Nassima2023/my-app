@@ -4,6 +4,14 @@
     align-items: center;
     // margin-left: 5px;
     // justify-content: center;
+
+    .collapsed-content {
+      background-color: #F6F6F6;
+      padding: 10px;
+      width: 90%; 
+      box-sizing: border-box;
+      color: #FF6060;
+    }
   }
 
 .collapse-gap {
@@ -24,7 +32,7 @@
     padding: 0 20px;
     cursor: pointer;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
   
     &.open {
       background-color: #FF6060;
@@ -42,13 +50,5 @@
     }
   }
   
-  .collapsed-content {
-    background-color: #F6F6F6;
-    padding: 10px;
-    width: 90%; 
-    box-sizing: border-box;
-    color: #FF6060;
-
-   
-  }
+  
   

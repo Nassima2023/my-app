@@ -67,6 +67,7 @@ main{
       margin-right: 10px;
       color: white;
       font-weight: 400;
+      font-size: 16px;
       overflow: hidden;
       text-overflow: ellipsis;
   
@@ -105,11 +106,35 @@ main{
 
 
 
+
 @media (max-width: 900px) {
+  .appartement-description .info-container h1.title {
+    font-size: 18px;
+  }
+
+  .appartement-description .info-container h2.subtitle {
+    font-size: 14px;
+  }
+
   .appartement-description {
     flex-direction: column;
     position: relative;
     padding-left: 10px;
+
+    .host-container {
+      position: absolute;
+      top: 100%; 
+      right: 0%; 
+      box-sizing: border-box;
+      margin-right: 0; 
+
+
+    .host-name {
+      color: #FF6060;
+      font-size: 12px;
+      width: 60px;
+      margin-right: -10px;
+    }}
 
     .tags-container {
       order: 1; 
@@ -120,25 +145,13 @@ main{
     .tag{
       width: 77px;
       padding: 2px;
-      font-size: 14px;
+      font-size: 12px;
     }
    
-    
-    .host-container {
-      position: absolute;
-      top: 100%; 
-      right: 0%; 
-      box-sizing: border-box;
-      margin-right: 0; 
-    }
-    
-    .host-name {
-      color: #FF6060;
-      font-size: 7px;
-      width: 60px;
-    }
   }
   
+  
+
   .stars-container{
     height: 20px;
     display: flex;

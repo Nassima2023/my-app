@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import '../styles/collapse.scss';
 import arrow from '../icones/arrow_back_ios-24px 2.png'
-import '../styles/collapse2.scss'
+// import '../styles/collapse2.scss'
 
 // Définition du composant Collapse
 function Collapse({ title, content }) {
