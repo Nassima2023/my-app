@@ -1,8 +1,8 @@
 import React from 'react';
-import Layout from './layout';
-import imgSource2 from './imgSource2.png';
-import Banner from './banner';
-import Collapse from './collapse'; 
+import Layout from '../composants/Layout';
+import imgSource2 from '../icones/imgSource2.png'
+import Banner from '../composants/Banner';
+import Collapse from '../composants/Collapse'; 
 
 function About() {
   return (

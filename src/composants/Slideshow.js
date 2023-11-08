@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Slideshow.scss';
-import ArrowLeft from './arrow_back_ios-24px 1.png';
-import ArrowRight from './arrow_forward_ios-24px 1.png';
+import '../styles/Slideshow.scss';
+import ArrowLeft from '../icones/arrow_back_ios-24px 1.png';
+import ArrowRight from '../icones/arrow_forward_ios-24px 1.png';
 
 const Slideshow = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

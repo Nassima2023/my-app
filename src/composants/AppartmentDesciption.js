@@ -1,18 +1,18 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useParams, useNavigate} from 'react-router-dom';
-import data from './data.json';
-import Layout from './layout';
-import Slideshow from './slideshow';
-import './Slideshow.scss';
-import './AppartmentDescription.scss';
-import Collapse from './collapse';
-import './collapse2.scss'
-import './NotFound'
+import data from '../data.json'
+import Layout from '../composants/Layout';
+import Slideshow from '../composants/Slideshow'
+import '../styles/Slideshow.scss';
+import '../styles/AppartmentDescription.scss';
+import Collapse from '../composants/Collapse';
+import '../styles/collapse2.scss'
+import '../composants/NotFound'
 
 // Importation des images des étoiles
-import starActiveImage from './star-active 3.png';
-import vectorImage from './Vector.png';
+import starActiveImage from '../icones/star-active 3.png';
+import vectorImage from '../icones/Vector.png'
 
 function generateStars(rating) {
   const stars = [];

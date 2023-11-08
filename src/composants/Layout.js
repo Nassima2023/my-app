@@ -1,9 +1,9 @@
 import React from 'react'; 
-import './App.scss'; 
-import logo from './logo.png'; 
-import logoWhite from './LogoPetit.png'; 
+import '../styles/App.scss'; 
+import logo from '../icones/logo.png'; 
+import logoWhite from '../icones/LogoPetit.png'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
-import './fontAwesome'; 
+import '../composants/fontAwesome'; 
 
 function Layout({ children }) {
   return (
@@ -11,7 +11,7 @@ function Layout({ children }) {
       <header> 
 
         <div className="logo"> 
-            <img src={logo} alt='logo'></img> 
+            <img src={logo} alt='logo' className='logo-small'></img> 
         </div>
 
         <nav> 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.scss';
+import '../styles/Card.scss';
 
 function AppartementCard(props) {
   const { id, title, cover} = props.appartement;

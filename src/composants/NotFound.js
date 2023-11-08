@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from './layout';
-import './NotFound.scss'; 
+import Layout from '../composants/Layout';
+import '../styles/NotFound.scss'; 
 
 function NotFound() {
   return (

@@ -1,9 +1,11 @@
 import React from 'react';
-import Layout from './layout'; //  j'importe le layout 
-import imgSource from './img.source.png';
-import Banner from './banner'; // j'importe le composant Banner
-import AppartementCard from './card'; // j'importe le composant Card
-import data from './data.json'; // j'importe les données depuis le fichier JSON
+import '../styles/App.scss'
+import '../styles/index.scss'
+import Layout from '../composants/Layout'
+import imgSource from '../icones/img.source.png';
+import Banner from '../composants/Banner'; // j'importe le composant Banner
+import AppartementCard from '../composants/Card'; // j'importe le composant Card
+import data from '../data.json'; // j'importe les données depuis le fichier JSON
 
 function App() {
   const Appartements = data.slice(0, 20);
